@@ -1,0 +1,2 @@
+// Authorize middleware
+module.exports = {};

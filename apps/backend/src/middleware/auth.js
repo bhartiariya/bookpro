@@ -1,0 +1,2 @@
+// Auth middleware
+module.exports = {};

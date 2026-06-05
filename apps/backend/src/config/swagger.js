@@ -1,0 +1,2 @@
+// Swagger configuration
+module.exports = {};
