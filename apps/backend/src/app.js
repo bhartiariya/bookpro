@@ -9,7 +9,7 @@ const { generalLimiter }  = require('./middleware/rateLimiter');
 
 // Route imports (add each as you build them)
 const authRoutes         = require('./modules/auth/auth.routes');
-// const userRoutes      = require('./modules/users/users.routes');
+const userRoutes         = require('./modules/users/users.routes');
 // const serviceRoutes   = require('./modules/services/services.routes');
 // (uncomment as you build each phase)
 
@@ -42,7 +42,7 @@ app.get('/health', (req, res) => {
 
 // --- API routes ---
 app.use('/api/v1/auth', authRoutes);
-// app.use('/api/v1/users',         userRoutes);
+app.use('/api/v1/users',         userRoutes);
 // app.use('/api/v1/services',      serviceRoutes);
 // app.use('/api/v1/slots',         slotRoutes);
 // app.use('/api/v1/bookings',      bookingRoutes);
