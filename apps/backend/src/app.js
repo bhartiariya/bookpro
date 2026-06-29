@@ -13,6 +13,7 @@ const userRoutes         = require('./modules/users/users.routes');
 const serviceRoutes      = require('./modules/services/services.routes');
 const slotRoutes         = require('./modules/slots/slots.routes');
 const bookingRoutes      = require('./modules/bookings/bookings.routes');
+const notificationRoutes = require('./modules/notifications/notifications.routes');
 // (uncomment as you build each phase)
 
 const app = express();
@@ -48,7 +49,7 @@ app.use('/api/v1/users',         userRoutes);
 app.use('/api/v1/services',      serviceRoutes);
 app.use('/api/v1/slots',         slotRoutes);
 app.use('/api/v1/bookings',      bookingRoutes);
-// app.use('/api/v1/notifications', notificationRoutes);
+app.use('/api/v1/notifications', notificationRoutes);
 // app.use('/api/v1/reviews',       reviewRoutes);
 // app.use('/api/v1/analytics',     analyticsRoutes);
 
