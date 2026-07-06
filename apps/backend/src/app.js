@@ -14,6 +14,8 @@ const serviceRoutes      = require('./modules/services/services.routes');
 const slotRoutes         = require('./modules/slots/slots.routes');
 const bookingRoutes      = require('./modules/bookings/bookings.routes');
 const notificationRoutes = require('./modules/notifications/notifications.routes');
+const reviewRoutes       = require('./modules/reviews/reviews.routes');
+const analyticsRoutes    = require('./modules/analytics/analytics.routes');
 // (uncomment as you build each phase)
 
 const app = express();
@@ -50,8 +52,8 @@ app.use('/api/v1/services',      serviceRoutes);
 app.use('/api/v1/slots',         slotRoutes);
 app.use('/api/v1/bookings',      bookingRoutes);
 app.use('/api/v1/notifications', notificationRoutes);
-// app.use('/api/v1/reviews',       reviewRoutes);
-// app.use('/api/v1/analytics',     analyticsRoutes);
+app.use('/api/v1/reviews',       reviewRoutes);
+app.use('/api/v1/analytics',     analyticsRoutes);
 
 // --- 404 handler (must be after all routes) ---
 app.use((req, res) => {
