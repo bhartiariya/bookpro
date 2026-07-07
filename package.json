@@ -1,0 +1,14 @@
+{
+  "name": "bookpro-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix apps/frontend\" \"npm run dev --prefix apps/backend\"",
+    "install:all": "npm install && npm run install:frontend && npm run install:backend",
+    "install:frontend": "npm install --prefix apps/frontend",
+    "install:backend": "npm install --prefix apps/backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
